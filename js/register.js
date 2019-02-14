@@ -1,8 +1,8 @@
 /* Created by Microsoft on 2016/7/30.*/
 $(document).ready(function () {
    function validateForm(){
-     if(checkUserName()&&checkPassword()&&checkRepassword()&&checkHobby()&&checkStatus()){
-         alert("恭喜您！注册成功！");
+     if(checkMasterName()&&checkEnterpriseAccount()){
+         alert("恭喜您！验证成功！");
      }
 }
 });
