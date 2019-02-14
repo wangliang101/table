@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<meta charset="UTF-8">-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>表单验证</title>
+</head>
+<body>
+<div class="container">
+
+    <form class="form-horizontal"  role="form">
+
+        <div class="form-group">
+            <label class="col-sm-3 control-label">调查名称：</label>
+            <div class="col-sm-7">
+                <input type="text" class="form-control" 
+                       placeholder="调查名称格式：创建人姓名-调查名称"/>
+            </div>
+            <div class="col-sm-2">
+                <span id="nameInfo"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="master-name" class="col-sm-3 control-label">调查负责人：</label>
+            <div class="col-sm-7">
+                <input type="text" id="master-name" class="form-control" onblur="checkMasterName()"
+                        placeholder="负责人名称，不能为空"/>
+            </div>
+            <div class="col-sm-2">
+                <span id="passwordInfo"></span>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">调查联系人：</label>
+            <div class="col-sm-7">
+                <input type="password" class="form-control" 
+                       placeholder="联系人名称，可以为空">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">是否预调研：</label>
+            <div class="col-sm-7">
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 是
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 否
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="enterprise-account" class="col-sm-3 control-label">被调查的企业账号：</label>
+            <div class="col-sm-7">
+                <textarea id="enterprise-account" class="form-control" rows="3" onblur="checkEnterpriseAccount()" placeholder="企业账号之间以英文分割，如234，789，不能为空"></textarea>
+            </div>
+            <div class="col-sm-2">
+                <span id="enterpriseAccountInfo"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="repassword" class="col-sm-3 control-label">调查摘要：</label>
+            <div class="col-sm-7">
+                <textarea class="form-control" rows="3" placeholder="可以为空"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" id="submit" class="btn btn-info" onclick="validateForm()">立即创建</button>
+                <button type="reset" class="btn btn-default">取消</button>
+            </div>
+        </div>
+</form>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
+
+</body>
+</html>
